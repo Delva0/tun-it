@@ -1,0 +1,6 @@
+* text=auto
+*.py text eol=lf
+*.sh text eol=lf
+adapters/wsl/tun text eol=lf
+*.ps1 text eol=lf
+*.psm1 text eol=lf

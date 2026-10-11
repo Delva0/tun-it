@@ -1,0 +1,20 @@
+name: checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: python -m unittest discover -s tests -v
+      - shell: pwsh
+        run: ./tests/Parse-PowerShell.ps1
+  shell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash -n adapters/wsl/install.sh adapters/wsl/remove.sh && sh -n adapters/wsl/tun adapters/wsl/dependencies.sh

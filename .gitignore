@@ -1,0 +1,15 @@
+/.state/
+/state/
+/reports/
+/config.json
+*.local.json
+*.log
+*.db
+*.db-*
+*.sqlite*
+*.pem
+*.key
+__pycache__/
+*.py[cod]
+.venv/
+vendor/

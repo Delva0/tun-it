@@ -1,0 +1,7 @@
+#!/bin/sh
+# tun-it managed command entry
+case "${1:-}" in
+  ''|--help|-h)
+    printf '%s\n' 'Usage: tun COMMAND [ARGUMENTS...]' 'Run a foreground command and its children through the configured TUN target.' '  tun --check                  Check TCP, UDP, DNS and IPv6 isolation' '  tun --check-core-failure     Verify fail-closed behavior' '  tun --check-carrier-failure  Verify fail-closed behavior' '  tun curl https://example.com' '  tun bash' ; exit 0 ;;
+esac
+exec sudo -- /usr/local/lib/tun-it/enter.py "$@"

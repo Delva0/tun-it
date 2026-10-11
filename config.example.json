@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "v2rayn_home": "",
+  "python": "python",
+  "profile_id": "",
+  "expected_exit": "",
+  "local_port": 10808,
+  "health_url": "https://www.google.com/",
+  "dns_server": "1.1.1.1",
+  "android": {"enabled": false, "sdk": "", "avd_home": "", "avd": "", "serial": "emulator-5554", "memory_mb": 2048, "cores": 2},
+  "wsl": {"enabled": false, "distributions": [], "listen_port": 18118},
+  "process_adapters": []
+}
